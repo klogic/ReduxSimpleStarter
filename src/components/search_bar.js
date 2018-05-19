@@ -11,11 +11,14 @@ class SearchBar extends Component{
 
   render() {
     return (
-      <div>
-        <input 
+      <div className="col-sm-8 form-group input-group">
+        <input className="form-control" 
         value = {this.state.term}
         onChange={ event => this.setState({ term: event.target.value }) }
         />
+        <span className="input-group-addon"><span className="fas fa-search"/></span>
+        
+
       </div>
     )
   }
