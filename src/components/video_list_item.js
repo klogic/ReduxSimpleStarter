@@ -5,7 +5,7 @@ const VideoItem = ({videoItem, onSelectedVideo}) => {
   const imageUrl = videoItem.snippet.thumbnails.default.url;
   const title = videoItem.snippet.title;
   return (
-    <li onClick={ ()=> { onSelectedVideo(videoItem) }} className="list-group media">
+    <li onClick={ ()=> { onSelectedVideo(videoItem) }} className="list-group media list-video-item">
       <div className="media-left">
       <img src={imageUrl} alt= {title}/>
       </div>

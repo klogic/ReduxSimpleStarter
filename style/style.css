@@ -1,0 +1,10 @@
+.list-video-item {
+  cursor: pointer;
+}
+.list-video-item:hover {
+  background-color:#eee;
+}
+
+.search-bar {
+  margin-top: 15px;
+}
