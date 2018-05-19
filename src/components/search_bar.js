@@ -14,23 +14,19 @@ class SearchBar extends Component{
       <div className="col-sm-8 form-group input-group search-bar">
         <input className="form-control" 
         value = {this.state.term}
-        onChange={ event => this.setState({ term: event.target.value }) }
+        onChange={ event => this.changeSearch(event.target.value) }
         />
         <span className="input-group-addon"><span className="fas fa-search"/></span>
-        
 
       </div>
     )
   }
 
-  /* 
-  from above is es6 arrow, make function shorter.
-    (event) => console.log(event.target.value) 
-  equal =>
-    onInputChange(event) {
-      console.log(event.target.value)
-    } 
-  */
+  changeSearch(term){
+    this.setState({ term });
+    this.props.onSearchVideoChange(term);
+  }
+
 }
 
 export default SearchBar;
