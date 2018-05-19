@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDetail  = ({video}) => {
   if (!video){
-    return <div>Loading...</div>
+    return <div className="col-md-8">Loading...</div>
   }
   const videoId = video.id.videoId;
   const title = video.snippet.title;
@@ -15,7 +15,7 @@ const VideoDetail  = ({video}) => {
   return (
   <div className="col-md-8">
     <div className="embed-responsive embed-responsive-16by9">
-      <iframe className="embed-responsive-item" src={url} />
+      <iframe className="embed-responsive-item" src={url} allowFullScreen />
     </div>
     <div className="details">
       <h4>{title}</h4>
