@@ -3,7 +3,7 @@ import React from 'react';
 const VideoItem = ({videoItem}) => {
   /* ({videoItem}) equal =>  const videoItem = props.videoItem; */ 
   const imageUrl = videoItem.snippet.thumbnails.default.url;
-  const title = videoItem.snippet.channelTitle;
+  const title = videoItem.snippet.title;
   return (
     <li className="list-group media">
       <div className="media-left">
